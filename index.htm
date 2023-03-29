@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script>
+      function handlerClick_Card(id) {
+        //let user = document.getElementById(id);
+        //let contador = user.children[0].children[0].children[1].children[1];
+        //contador.innerText = parseInt(contador.innerText) + 1;
+        let users = document.querySelectorAll("ul > li");
+        for (const user of users) {
+          if (user.id == id) {
+            let contador = user.children[0].children[0].children[1].children[1];
+            contador.innerText = parseInt(contador.innerText) + 1;
+          }
+        }
+        console.log(users);
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -15,7 +30,7 @@
     </header>
     <main>
       <ul class="users-list">
-        <li class="user-item">
+        <li class="user-item" id="1" onclick="handlerClick_Card(1)">
           <div class="card user-item__content">
             <a href="#">
               <div class="user-item__image avatar">
@@ -23,12 +38,12 @@
               </div>
               <div class="user-item__info">
                 <h2>Adele Vance</h2>
-                <h3>@adele</h3>
+                <h3>0</h3>
               </div>
             </a>
           </div>
         </li>
-        <li class="user-item">
+        <li class="user-item" id="2" onclick="handlerClick_Card(2)">
           <div class="card user-item__content">
             <a href="#">
               <div class="user-item__image avatar">
@@ -36,7 +51,7 @@
               </div>
               <div class="user-item__info">
                 <h2>Lee Gu</h2>
-                <h3>@Lee</h3>
+                <h3>0</h3>
               </div>
             </a>
           </div>
