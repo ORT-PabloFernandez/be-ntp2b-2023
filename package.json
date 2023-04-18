@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "start-dev": "nodemon index.js",
+    "build-dev": "npx webpack --mode=development",
+    "build-prod": "npx webpack --mode=production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.2.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "papaparse": "^5.4.1"
   },
   "type": "module",
   "devDependencies": {
